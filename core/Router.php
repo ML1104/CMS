@@ -16,27 +16,34 @@ class Router
         return $router;
     }
 
-    public function get($route, $controller)
+    public function get($route, $controller, $auth = false)
     {
-        $this->routes['GET'][$route] = $controller;
+        $this->routes['GET'][$route] = [$controller, $auth];
     }
 
-    public function post($route, $controller)
+    public function post($route, $controller, $auth = false)
     {
-        $this->routes['POST'][$route] = $controller;
+        $this->routes['POST'][$route] = [$controller, $auth];
     }
 
     public function direct($uri, $requestMethod) {
-
+        // dd($_SESSION['auth']);
         if(array_key_exists($uri, $this->routes[$requestMethod])) {
-
-            $this->callAction(...explode('@', $this->routes[$requestMethod][$uri]));
-
-
+            if($this->routes[$requestMethod][$uri][1]) {
+                if($_SESSION['auth']){
+                    $this->callAction(...explode('@', $this->routes[$requestMethod][$uri][0]));
+                }else{
+                    return redirect("/admin/login");
+                }
+            }else{
+                     $this->callAction(...explode('@', $this->routes[$requestMethod][$uri][0]));
+            }
             //require $this->routes[$requestMethod][$uri];
         } else {
             require "views/404.view.php";
         }
+
+        
 
     }
 

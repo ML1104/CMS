@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Controllers\\Authenticate' => $baseDir . '/controllers/Authenticate.php',
     'App\\Controllers\\PagesController' => $baseDir . '/controllers/PagesController.php',
     'App\\Controllers\\ProductsController' => $baseDir . '/controllers/ProductsController.php',
     'App\\Core\\App' => $baseDir . '/core/App.php',
@@ -13,8 +14,8 @@ return array(
     'App\\Core\\Router' => $baseDir . '/core/Router.php',
     'App\\Database\\Connection' => $baseDir . '/database/Connection.php',
     'App\\Database\\QueryBuilder' => $baseDir . '/database/QueryBuilder.php',
-    'ComposerAutoloaderInita00ff4174feb40bd537061744dd85be6' => $vendorDir . '/composer/autoload_real.php',
+    'ComposerAutoloaderInitc0e7a929780ec1ee0f3024efd98691cf' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
-    'Composer\\Autoload\\ComposerStaticInita00ff4174feb40bd537061744dd85be6' => $vendorDir . '/composer/autoload_static.php',
+    'Composer\\Autoload\\ComposerStaticInitc0e7a929780ec1ee0f3024efd98691cf' => $vendorDir . '/composer/autoload_static.php',
     'Task' => $baseDir . '/core/Task.php',
 );
