@@ -62,6 +62,18 @@ class QueryBuilder
         }
     }
 
+    public function getOneUser($table, $email, $model = "")
+    {
+        $query = $this->pdo->prepare("SELECT * FROM {$table} WHERE email='{$email}'");
+        $query->execute();
+
+        if($model) {
+            return $query->fetch(\PDO::FETCH_CLASS, $model);
+        } else {
+            return $query->fetch(\PDO::FETCH_OBJ);
+        }
+    }
+
     public function destroy($table, $id)
     {
         $query = $this->pdo->prepare("DELETE FROM {$table} WHERE id='{$id}'");

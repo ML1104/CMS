@@ -12,4 +12,9 @@
 <body>
 <section class="section">
     <div class="container">
+    <?php if(isset($_SESSION['auth'])): ?>
+        Hi , <?=$_SESSION["auth"]->email;?>
+        <br>
+        <a href="/admin/logout">Log out</a>
+<?php endif;?>
 <?php require "nav.view.php"; ?>
