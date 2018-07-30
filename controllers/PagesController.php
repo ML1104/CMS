@@ -8,10 +8,10 @@ class PagesController
 {
     public function home()
     {
-        $tasks = App::get('database')->getAll("tasks", "Task");
+        $models = App::get('database')->getAll("models", "Model");
 
-        $tasks[0]->complete();
-        return view('index', compact('tasks'));
+        $models[0]->lowVotes();
+        return view('index', compact('models'));
     }
 
     public function contact()
@@ -30,10 +30,17 @@ class PagesController
         return redirect('/');
     }
 
-    public function products()
+    public function models()
     {
-        $products = App::get('database')->getAll("products");
+        $models = App::get('database')->getAll("models");
 
-        return view('products', compact('products'));
+        return view('models', compact('models'));
+    }
+
+    public function apiModels()
+    {
+        $models = App::get('database')->getAll("models");
+
+        echo json_encode($models);
     }
 }

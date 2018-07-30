@@ -17,5 +17,5 @@ return array(
     'ComposerAutoloaderInitc0e7a929780ec1ee0f3024efd98691cf' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
     'Composer\\Autoload\\ComposerStaticInitc0e7a929780ec1ee0f3024efd98691cf' => $vendorDir . '/composer/autoload_static.php',
-    'Task' => $baseDir . '/core/Task.php',
+    'Model' => $baseDir . '/core/Model.php',
 );

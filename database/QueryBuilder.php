@@ -33,6 +33,7 @@ class QueryBuilder
             );
         $query = $this->pdo->prepare($sql);
         $query->execute($payload);
+//        $query->debugDumpParams();
     }
 
     public function update($table, $payload)

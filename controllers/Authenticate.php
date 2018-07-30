@@ -11,7 +11,7 @@ class Authenticate {
 
     public function createuser(){
         $credentials = $_POST;
-        $credentials->password = $this->hash($credentials);
+        $credentials['password'] = $this->hash($credentials);
         App::get('database')->addNew("users", $credentials);
         return redirect('/');
     }

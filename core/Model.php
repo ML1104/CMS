@@ -1,24 +1,24 @@
 <?php
 
-class Task {
+class Model {
     public $description;
 
-    public $completed;
+    public $votes;
 
     /**
      * Cheks if task is completed
      * @return mixed
      */
-    public function isCompleted()
+    public function hasVotes()
     {
-        return $this->completed;
+        return $this->votes;
     }
 
     /**
      * Complete the task
      */
-    public function complete() {
-        $this->completed = true;
+    public function lowVotes() {
+        $this->votes = 0;
     }
 
     //TODO: Create a method for save

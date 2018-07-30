@@ -3,7 +3,8 @@
 $router->get('', 'PagesController@home');
 $router->get('about-us', 'PagesController@aboutUs');
 $router->get('contact', 'PagesController@contact');
-$router->get('products', 'PagesController@products');
+$router->get('models', 'PagesController@models');
+$router->get('api/products', 'PagesController@apiModels');
 
 $router->post('task/add', 'PagesController@storeTask');
 
