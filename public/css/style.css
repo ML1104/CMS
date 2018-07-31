@@ -1,0 +1,49 @@
+.navbar {
+    background-color: grey;
+    position: sticky;
+    top: 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link {
+    color: lightgray;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.logo {
+    font-size: 20px;
+    color: white;
+}
+
+.index-image {
+    width: 100%;
+}
+
+.background {
+    background-color: lightgray;
+    height: 500px;
+}
+
+.greeting  {
+    padding: 20px;
+    text-align: center;
+    background-color: gray;
+    border: 5px solid white;
+}
+
+.intro-text {
+    padding: 10px;
+}
+
+.browse-button {
+    float: right;
+    padding: 20px;
+}
