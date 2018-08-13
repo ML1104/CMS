@@ -4,16 +4,17 @@ namespace App\Controllers;
 use \App\Core\App;
 
 class Authenticate {
-    public function signup()
+    public function register()
     {
-        return view('signup');
+        return view('register');
     }
 
     public function createuser(){
         $credentials = $_POST;
         $credentials['password'] = $this->hash($credentials);
-        App::get('database')->addNew("users", $credentials);
-        return redirect('/');
+        App::get('database')->addUser($credentials);
+//        return redirect('login');
+        dd($credentials);
     }
     private function hash($credentials){
         $password = $credentials['password'];

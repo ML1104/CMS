@@ -126,3 +126,24 @@
 .login {
     width: 75%;
 }
+
+td {
+    background-color: lightgray;
+}
+
+th {
+    color: white;
+}
+
+.labels {
+    color: white;
+}
+
+.delete {
+    color: white;
+}
+
+.show-item {
+    background-color: lightgray;
+    padding: 20px;
+}

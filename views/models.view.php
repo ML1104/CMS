@@ -20,7 +20,7 @@
                 <div>Artist: <i><?= $model->artist ?></i></div>
                 <div>Price: <strong><?= $model->price ?>$</strong></div>
             </div>
-            <a href="/models/<?= $model->id ?>" class="btn btn-primary">Go somewhere</a>
+            <a href="/admin/products/show?id=<?= $model->id ?>" class="btn btn-primary">View</a>
         </div>
     </div>
     <?php endforeach; ?>

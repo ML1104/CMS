@@ -5,23 +5,16 @@
     <h1>Login</h1>
     <form action="/admin/validate" method="POST" class="login">
         <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" required name="name" id="name" class="form-control" >
-        </div>
-        <div class="form-group">
-            <label for="lastname">Last Name</label>
-            <input type="text" required name="lastname" id="lastname" class="form-control" >
+            <label for="email">Email</label>
+            <input type="email" required name="email" id="email" class="form-control" >
         </div>
         <div class="form-group">
             <label for="password">Password</label>
             <input type="password" required name="password" id="password" class="form-control" >
         </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" required name="email" id="email" class="form-control" >
-        </div>
-
-        <button class="btn btn-primary">Submit</button>
+        <button class="btn btn-primary">Login</button>
+        <br><br>
+        <div>Don't have an account? <a href="register">Register</a></div>
     </form>
 </div>
 <br>

@@ -33,7 +33,16 @@ class QueryBuilder
             );
         $query = $this->pdo->prepare($sql);
         $query->execute($payload);
-//        $query->debugDumpParams();
+    }
+
+    public function addUser($credentials)
+    {
+        $sql = sprintf("INSERT INTO 'users' (%s) VALUES (%s)",
+            implode(", ", array_keys($credentials)),
+            ":" . implode(", :", array_keys($credentials))
+        );
+        $query = $this->pdo->prepare($sql);
+        $query->execute($credentials);
     }
 
     public function update($table, $payload)

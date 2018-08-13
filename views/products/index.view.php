@@ -20,8 +20,8 @@
         <td><?= $product->id ?></td>
         <td><?= $product->title ?></td>
         <td><?= substr($product->description, 0, 50) ?>...</td>
-        <td><img src="/storage/<?= $product->image ?>" alt="" width="150"></td>
-        <td><a href="/admin/products/show?id=<?= $product->id ?>">Show</a> | <a href="/admin/products/edit?id=<?= $product->id ?>">Edit</a> | <form action="/admin/products/destroy" method="post"><button class="btn">
+        <td><img src="<?= $product->image ?>" alt="" width="150"></td>
+        <td><a href="/admin/products/show?id=<?= $product->id ?>">Show</a> | <a href="/admin/products/edit?id=<?= $product->id ?>">Edit</a> | <form action="/admin/products/destroy" method="post"><button class="btn delete">
                     <input type="hidden" name="id" value="<?= $product->id ?>">Delete</button></form></td>
     </tr>
     <?php endforeach; ?>
