@@ -5,6 +5,7 @@ $router->get('about-us', 'PagesController@aboutUs');
 $router->get('contact', 'PagesController@contact');
 $router->get('models', 'PagesController@models');
 $router->get('api/products', 'PagesController@apiModels');
+$router->get('models/{id}', 'CourseDetailsController@modelView');
 
 $router->post('task/add', 'PagesController@storeTask');
 

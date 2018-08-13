@@ -11,6 +11,7 @@ class PagesController
         $models = App::get('database')->getAll("models", "Model");
 
         $models[0]->lowVotes();
+
         return view('index', compact('models'));
     }
 
@@ -27,6 +28,7 @@ class PagesController
     public function storeTask()
     {
         App::get('database')->addNew("tasks", $_POST);
+
         return redirect('/');
     }
 
@@ -42,5 +44,14 @@ class PagesController
         $models = App::get('database')->getAll("models");
 
         echo json_encode($models);
+    }
+
+        public function modelView($id)
+    {
+        $modelId = App::get('database')->getOne('models', $id);
+
+        echo json_encode($modelId);
+
+        return view('model'.$id);
     }
 }

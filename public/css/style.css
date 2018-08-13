@@ -17,6 +17,11 @@
     align-items: center;
 }
 
+.horizontal-align {
+    display: flex;
+    align-items: center;
+}
+
 .nav-link {
     color: lightgray;
 }
@@ -70,4 +75,54 @@
 .browse-button button:hover {
     cursor: pointer;
 
+}
+
+.card {
+    padding: 0;
+    background-color: lightgray;
+}
+
+.card p, .centered{
+    text-transform: capitalize;
+}
+
+.card-title, .card-text {
+    margin-bottom: 0;
+}
+
+.btn {
+    background-color: #3E3E3E;
+    border-color: white;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #3E3E3E;
+    border-color: #3E3E3E;
+}
+
+.btn:hover {
+    background-color: white!important;
+    border-color: #3E3E3E;
+    color: #3E3E3E!important;
+}
+
+.btn:focus:active {
+    box-shadow: none!important;
+    background-color: white!important;
+    color: #3E3E3E!important;
+}
+
+.centered {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.whitespace {
+    height: 829px!important;
+}
+
+.login {
+    width: 75%;
 }

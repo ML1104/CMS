@@ -21,3 +21,20 @@ function view($file, $data = []) {
 function redirect($path) {
     header("Location: {$path}");
 }
+
+function checkCategory($id) {
+    switch ($id) {
+        case 1:
+            return 'Humanoid';
+            break;
+        case 2:
+            return 'Flora';
+            break;
+        case 3:
+            return 'Fauna';
+            break;
+        case 4:
+            return 'Construct';
+            break;
+    }
+}
